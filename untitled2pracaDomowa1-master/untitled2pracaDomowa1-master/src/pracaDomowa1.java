@@ -2,8 +2,18 @@
 public class pracaDomowa1 {
     public static void main(String[] args) {
         int[] t = {-8, 2, 6, 76, 1, -17, 0, 6, 2, 7, 92, 17, -32, -1};
-        int[][] tabIn = {{1, 2}, {8, 4, 6, 7}, {7, 8, 9}, {1, 5, 6, 6, 6, 6, 6, 1}, {1, 1, 1, 1, 1}};
-        histogram(tabIn);
+        int[][] tabIn ={{1, 2}, {1, 1, 1, 1},{3, 3, 3}};
+        int[][] tabIn2 ={{1, 3}, {1, 6, 1, 7},{5, 3, 6}};
+        int[][] histogram2=Tools.histogram(tabIn2, 5);
+        String str5=Tools.histogramToString(histogram2);
+        System.out.println("histogramToString");
+        System.out.println(str5);
+        int[][]histogram=Tools.histogram(tabIn, 3);
+        System.out.println();
+        Tools.printHistogram(histogram);
+        System.out.println();
+        
+        //histogram(tabIn);
 
 
 
@@ -34,6 +44,10 @@ public class pracaDomowa1 {
         System.out.println(lowToUpFromHalf("Alamakkotaa"));
         System.out.println(removeWhiteSigns("ala ma kota"));
         System.out.println("isStartsLike=" + isStartsLike("kaota", "aaaaakot"));
+        int[] tab5= {1, 1,1,2, 3, 6, 4, 5};
+        //System.out.println("k-ty element"+kElement(tab5, 3));
+        
+        
     }
 
     //0. metoda licząca pole koła
@@ -73,7 +87,7 @@ public class pracaDomowa1 {
     }
 
     //2. metoda liczaca spalanie paliwa. Argumenty: dystans s i spalanie f
-    static double fuelCalc(double s, double f) {
+    public static double fuelCalc(double s, double f) {
         return s * f / 100;
     }
 
@@ -104,6 +118,9 @@ public class pracaDomowa1 {
                     tab[i + 1] = temp;
                 }
             }
+        }
+        for(int i=0; i<tab.length; i++) {
+        	
         }
         e = tab[k - 1];
         return e;
@@ -137,7 +154,7 @@ public class pracaDomowa1 {
         }
         double totalAverage = sum / totalQ;
         System.out.println("totalAverage=" + totalAverage);
-        return sum;
+        return totalAverage;
     }
     //7. Histogram
     static void histogram(int[][] tabIn){
