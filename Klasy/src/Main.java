@@ -20,13 +20,13 @@ public class Main {
 		System.out.println(big.toString());
 		System.out.println(car.toString());
 		System.out.println(car.drive("string", 2));
-		
+		System.out.println("silnia"+silnia(0));
 		//getter i setter 
 		System.out.println("nazwa smaochodu: "+car.getName());
 		car.setName("czerwony samochód");
 		System.out.println("nazwa smaochodu: "+car.getName());
-		
-		
+		printFibonacci(10);
+		fibonacci(10);
 		//metoda private
 		//System.out.println(car.drive(1, "string"));
 		//pole private
@@ -57,5 +57,46 @@ public class Main {
 		System.out.println("prowadzacy: "+z4.getProwadzacy()+" iloœæ osób: "+z4.getIloscOsob()+ " nazwa sali: "+ z4.getNazwaSali());
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	static int silnia(int n) {
+		int k=1;
+		if(n>0) {
+		k=n*silnia(n-1);
+		}
+		return k;
+	}
+	static void printFibonacci(int n) {
+		
+		for(int i=1; i<n; i++) {
+			System.out.println(fibonacci(i));
+		}
 
 }
+	static int fibonacci(int m) {
+		int fibo;
+		if(m==0) {
+			fibo=0;
+		}
+		if(m==1||m==2) {
+			fibo=1;
+		}
+		else {
+			fibo=fibonacci(m-1)+fibonacci(m-2);
+		}
+
+
+		return fibo;
+		}
+		
+}
+	
+	
+
+
